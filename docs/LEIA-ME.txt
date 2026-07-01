@@ -1,10 +1,14 @@
-Coloque aqui os prints do sistema com estes nomes (referenciados no README.md):
+Salve os 4 prints AQUI nesta pasta, com EXATAMENTE estes nomes
+(são os que o README.md referencia):
 
-  home.png          -> tela inicial da loja
-  checkout.png      -> tela de finalizar compra
-  admin-pedidos.png -> painel administrativo de pedidos
+  home.png             -> tela inicial da loja (Produtos em Destaque)
+  checkout.png         -> tela "Finalizar Compra" com as opções de frete
+  admin-dashboard.png  -> painel administrativo (Dashboard)
+  admin-produtos.png   -> painel "Gerenciar Produtos"
 
-Dicas:
-- Use imagens em boa resolução (largura ~1200px).
-- Pode adicionar outros prints e referenciá-los no README.
-- Evite prints que mostrem dados reais de clientes (CPF, e-mail, endereço).
+IMPORTANTE (privacidade):
+- No print do CHECKOUT aparecem dados pessoais reais (nome, e-mail, telefone
+  e endereço). BORRE/TAMPE esse bloco antes de salvar, ou refaça a compra com
+  dados fictícios. Não publique endereço residencial em repositório público.
+
+Formato: PNG, largura ~1200px de preferência.

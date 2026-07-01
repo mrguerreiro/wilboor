@@ -18,14 +18,15 @@ Não é um clone de tutorial: está **no ar, processando pedidos de verdade**, i
 
 ▶️ **A melhor forma de ver é acessar o site no ar:** [wilboor.com.br](https://wilboor.com.br)
 
-<!--
-  Para adicionar prints: salve as imagens em docs/ (home.png, checkout.png,
-  admin-pedidos.png) e descomente a tabela abaixo.
+### Loja
 
-| Loja | Checkout | Painel Admin |
-|------|----------|--------------|
-| ![Home](docs/home.png) | ![Checkout](docs/checkout.png) | ![Admin](docs/admin-pedidos.png) |
--->
+| Página inicial | Checkout com frete calculado |
+|:---:|:---:|
+| ![Página inicial da loja](docs/home.png) | ![Finalizar compra com opções de frete](docs/checkout.png) |
+
+### Painel administrativo
+
+![Dashboard do painel](docs/admin-dashboard.png)
 
 ---
 
