@@ -1,22 +1,32 @@
-# Wilboor — E-commerce completo (PIX, cartão e etiquetas automáticas)
+# 🛒 Wilboor — E-commerce full-stack em produção
 
-> **Vitrine de projeto.** Este repositório apresenta um e-commerce full-stack que desenvolvi e mantenho em produção. O **código-fonte é privado** — disponível para avaliação mediante contato.
+**Loja virtual completa, do catálogo à etiqueta de envio — com pagamentos reais (PIX, cartão e boleto) e logística automatizada.** Projeto individual, desenvolvido do zero e **rodando em produção com pedidos de verdade**.
 
-🔗 **Veja funcionando:** [https://wilboor.com.br](https://wilboor.com.br)
+![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-Express_5-339933?logo=node.js&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-Mongoose-47A248?logo=mongodb&logoColor=white)
+![Mercado Pago](https://img.shields.io/badge/Mercado_Pago-PIX_%7C_Cart%C3%A3o-009EE3?logo=mercadopago&logoColor=white)
+![Melhor Envio](https://img.shields.io/badge/Melhor_Envio-Etiquetas-7B2FF7)
+![Deploy](https://img.shields.io/badge/Deploy-Render-46E3B7?logo=render&logoColor=white)
+
+### 🔗 [Acesse o site no ar → wilboor.com.br](https://wilboor.com.br)
+
+> **Vitrine de projeto.** O **código-fonte é privado**; concedo acesso de leitura para avaliação em processos seletivos. Fale comigo: [wilboor.com@gmail.com](mailto:wilboor.com@gmail.com)
 
 ---
 
-## O que é
+## ✨ Por que este projeto se destaca
 
-Loja virtual completa, do catálogo à etiqueta de envio, com **pagamentos reais** (Mercado Pago: cartão, boleto e PIX) e **integração de logística** (Melhor Envio) que **gera a etiqueta de transporte automaticamente** assim que o pagamento é confirmado.
-
-Não é um clone de tutorial: está **no ar, processando pedidos de verdade**, incluindo webhooks de pagamento, e-mails transacionais e um painel administrativo próprio.
+- 💳 **Pagamentos reais** integrados ao Mercado Pago — PIX (com QR Code e confirmação automática na tela), cartão e boleto
+- 🏷️ **Logística automatizada:** assim que o pagamento é confirmado, o sistema **gera a etiqueta de transporte sozinho** na Melhor Envio
+- 🔄 **Não é um clone de tutorial:** está no ar, com webhooks, e-mails transacionais e painel administrativo próprio, atendendo pedidos de verdade
+- 🧱 **Full-stack de ponta a ponta:** frontend, backend, banco, integrações, deploy e operação — tudo feito por mim
 
 ---
 
-## Demonstração
+## 📸 Demonstração
 
-▶️ **A melhor forma de ver é acessar o site no ar:** [wilboor.com.br](https://wilboor.com.br)
+▶️ **Melhor ainda: veja funcionando em** [wilboor.com.br](https://wilboor.com.br)
 
 ### Loja
 
@@ -30,13 +40,13 @@ Não é um clone de tutorial: está **no ar, processando pedidos de verdade**, i
 |:---:|:---:|
 | ![Dashboard do painel](docs/admin-dashboard.png) | ![Gestão de pedidos com status de pagamento e etiqueta](docs/admin-pedidos.png) |
 
-**Gestão de produtos** (com peso e dimensões para o cálculo de frete)
+**Gestão de produtos** (com peso e dimensões que alimentam o cálculo de frete)
 
 ![Gerenciar produtos](docs/admin-produtos.png)
 
 ---
 
-## Principais funcionalidades
+## 🚀 Funcionalidades
 
 ### Cliente
 - Cadastro com **validação de CPF** (dígitos verificadores) e verificação de e-mail
@@ -50,8 +60,8 @@ Não é um clone de tutorial: está **no ar, processando pedidos de verdade**, i
 ### Administrativo
 - Gestão de produtos (criar, editar, destacar, pausar/publicar)
 - Gestão de clientes e fornecedores
-- **Painel de pedidos** com status de pagamento e etiqueta
-- **Verificação segura de pagamento** (consulta o status real no Mercado Pago, sem aprovar nada na marra)
+- **Painel de pedidos** com status de pagamento e de etiqueta
+- **Verificação segura de pagamento** (consulta o status real no Mercado Pago — nunca aprova "na marra")
 - Geração e reemissão de etiquetas; tratamento de saldo insuficiente
 
 ### Automação
@@ -61,27 +71,27 @@ Não é um clone de tutorial: está **no ar, processando pedidos de verdade**, i
 
 ---
 
-## Arquitetura
+## 🏗️ Arquitetura
 
 ```
 ┌────────────────────┐     HTTPS      ┌─────────────────────────────┐
-│   React 19 (SPA)   │ ─────────────▶ │   Express 5 (API + estático)│
+│   React 19 (SPA)   │ ─────────────▶ │  Express 5 (API + estático) │
 │  Bootstrap, Axios  │                │   serve o build do React    │
 └────────────────────┘                └───────────┬─────────────────┘
                                                    │
         ┌──────────────────────┬───────────────────┼───────────────────┐
-        ▼                      ▼                   ▼                   ▼
-   ┌─────────┐          ┌──────────────┐   ┌──────────────┐    ┌──────────────┐
-   │ MongoDB │          │ Mercado Pago │   │ Melhor Envio │    │  Brevo (mail)│
-   │(Mongoose)│         │  pagamentos  │   │ frete/etiqueta│   │ transacional │
-   └─────────┘          └──────────────┘   └──────────────┘    └──────────────┘
+        ▼                      ▼                    ▼                   ▼
+   ┌──────────┐        ┌──────────────┐    ┌───────────────┐   ┌──────────────┐
+   │ MongoDB  │        │ Mercado Pago │    │ Melhor Envio  │   │ Brevo (mail) │
+   │(Mongoose)│        │  pagamentos  │    │ frete/etiqueta│   │ transacional │
+   └──────────┘        └──────────────┘    └───────────────┘   └──────────────┘
 ```
 
-Deploy em serviço **Node único no Render**: o Express compila e serve o frontend, expõe a API e recebe o webhook de pagamento. `index.html` servido com `no-cache` para nunca ficar preso em versão antiga; assets com hash têm cache longo.
+Deploy em **serviço Node único no Render**: o Express compila e serve o frontend, expõe a API e recebe o webhook de pagamento. O `index.html` é servido com `no-cache` (nunca fica preso em versão antiga) e os assets com hash têm cache longo.
 
 ---
 
-## Stack
+## 🧰 Stack
 
 | Camada | Tecnologias |
 |--------|-------------|
@@ -96,16 +106,28 @@ Deploy em serviço **Node único no Render**: o Express compila e serve o fronte
 
 ---
 
-## Destaques de engenharia
+## 🧠 Destaques de engenharia
 
-- **Webhook resiliente:** o Mercado Pago não envia o status no corpo da notificação — o sistema consulta o pagamento na API para confirmar antes de aprovar e emitir etiqueta (idempotente).
+- **Webhook resiliente:** o Mercado Pago não envia o status no corpo da notificação — o sistema consulta o pagamento na API antes de aprovar e emitir etiqueta, de forma **idempotente** (não gera etiqueta duplicada).
 - **Frete correto:** cálculo com peso e dimensões reais dos produtos, empilhando volumes de múltiplos itens; a etiqueta usa exatamente o pacote cotado.
 - **Segurança de operação:** aprovação de pedido só acontece com confirmação real do Mercado Pago; exclusão bloqueada para pedidos pagos.
 - **Boas práticas:** segredos fora do versionamento, Helmet, rate limiting, CORS restrito, validação de entrada e limite de payload.
 
 ---
 
-## Sobre o código
+## 👤 Meu papel no projeto
+
+Projeto **individual, do zero à produção**. Sou responsável por:
+
+- **Produto e UX** — concepção das telas e do fluxo de compra
+- **Frontend** — SPA em React (loja + painel administrativo)
+- **Backend** — API REST em Express, autenticação, regras de negócio
+- **Integrações** — Mercado Pago (pagamentos + webhook), Melhor Envio (frete + etiquetas), Brevo (e-mails)
+- **Infra e operação** — deploy no Render, banco no MongoDB Atlas e **manutenção do sistema em produção**
+
+---
+
+## 📬 Sobre o código & contato
 
 O código-fonte é **proprietário e privado**. Tenho prazer em apresentá-lo em uma conversa ou conceder acesso de leitura ao repositório para processos seletivos.
 
