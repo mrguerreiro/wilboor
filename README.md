@@ -26,7 +26,13 @@ Não é um clone de tutorial: está **no ar, processando pedidos de verdade**, i
 
 ### Painel administrativo
 
-![Dashboard do painel](docs/admin-dashboard.png)
+| Dashboard | Pedidos — pagamento e etiqueta |
+|:---:|:---:|
+| ![Dashboard do painel](docs/admin-dashboard.png) | ![Gestão de pedidos com status de pagamento e etiqueta](docs/admin-pedidos.png) |
+
+**Gestão de produtos** (com peso e dimensões para o cálculo de frete)
+
+![Gerenciar produtos](docs/admin-produtos.png)
 
 ---
 
