@@ -11,7 +11,7 @@
 
 ### 🔗 [Acesse o site no ar → wilboor.com.br](https://wilboor.com.br)
 
-> **Vitrine de projeto.** O **código-fonte é privado**; concedo acesso de leitura para avaliação em processos seletivos. Fale comigo: [wilboor.com@gmail.com](mailto:wilboor.com@gmail.com)
+> **Vitrine de projeto.** O **código-fonte é privado**; concedo acesso de leitura para avaliação em processos seletivos. Fale comigo: [marcosguerreiro_dev@outlook.com](mailto:marcosguerreiro_dev@outlook.com)
 
 ---
 
@@ -131,4 +131,4 @@ Projeto **individual, do zero à produção**. Sou responsável por:
 
 O código-fonte é **proprietário e privado**. Tenho prazer em apresentá-lo em uma conversa ou conceder acesso de leitura ao repositório para processos seletivos.
 
-**Contato:** [wilboor.com@gmail.com](mailto:wilboor.com@gmail.com)
+**Contato:** [marcosguerreiro_dev@outlook.com](mailto:marcosguerreiro_dev@outlook.com)
